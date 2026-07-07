@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@theme {
+  --color-saffron-50: #fff9f2;
+  --color-saffron-100: #ffeccc;
+  --color-saffron-200: #ffd499;
+  --color-saffron-500: #ff9933;
+  --color-saffron-600: #e67e17;
+  --color-saffron-700: #cc6600;
+
+  --color-navy-50: #f0f5fa;
+  --color-navy-100: #dbe7f2;
+  --color-navy-500: #0f4c81;
+  --color-navy-600: #0a355c;
+  --color-navy-700: #072542;
+  --color-navy-800: #041629;
+  --color-navy-900: #020c17;
+
+  --color-tricolor-green-50: #f0f9f1;
+  --color-tricolor-green-500: #138808;
+  --color-tricolor-green-600: #0e6b05;
+
+  --color-ash-light: #f8fafc;
+  --color-ash-card: #ffffff;
+  --color-ash-border: #e2e8f0;
+}
+
+:root {
+  font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8fafc;
+  /* Light India-inspired background dot mesh pattern using saffron and green */
+  background-image: 
+    radial-gradient(rgba(255, 153, 51, 0.02) 1.5px, transparent 0),
+    radial-gradient(rgba(19, 136, 8, 0.02) 1.5px, transparent 0);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Custom scrollbars for chat */
+.chat-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.chat-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* Micro-animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+.pulse-animation {
+  animation: pulse-slow 3s infinite ease-in-out;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out forwards;
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- Global Transition Duration (250ms) --- */
+.hover-card-effect,
+.hover-btn-effect,
+input,
+select,
+textarea {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card hover: lift up, increase shadow */
+.hover-card-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 24px -4px rgba(15, 76, 129, 0.12), 0 6px 12px -2px rgba(15, 76, 129, 0.06);
+  border-color: rgba(15, 76, 129, 0.15);
+}
+
+/* Button hover: slight scale, lift & soft shadow */
+.hover-btn-effect:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px -4px rgba(15, 76, 129, 0.15), 0 4px 6px -2px rgba(15, 76, 129, 0.05);
+}
+
+/* Form input focus: soft border glow & navy outline */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-navy-500) !important;
+  box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.15) !important;
+  background-color: #ffffff !important;
+}
+
+/* --- Premium Page Transition --- */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-fade-in {
+  animation: pageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- Government Navy Tinted Soft Shadows --- */
+.shadow-xs {
+  box-shadow: 0 1px 2px 0 rgba(10, 60, 96, 0.04) !important;
+}
+.shadow-sm {
+  box-shadow: 0 2px 8px 0 rgba(10, 60, 96, 0.05) !important;
+}
+.shadow-md {
+  box-shadow: 0 6px 20px -2px rgba(10, 60, 96, 0.08) !important;
+}
+.shadow-lg {
+  box-shadow: 0 12px 28px -4px rgba(10, 60, 96, 0.12) !important;
+}
+
+/* --- Clean Typography Spacing & Line Height --- */
+h1, h2, h3, h4 {
+  letter-spacing: -0.025em !important;
+}
+
+
+

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "SB-JRWQA8",
+    "title": "Pothole on Main Road",
+    "description": "Large pothole causing traffic issues.",
+    "category": "road",
+    "location": "Bengaluru",
+    "date": "2026-07-07T07:26:25.894Z",
+    "status": "resolved",
+    "image": null
+  },
+  {
+    "id": "SB-XBRMDV",
+    "title": "Pothole on Main Road",
+    "description": "Large pothole causing traffic issues.",
+    "category": "garbage",
+    "location": "Bengaluru",
+    "date": "2026-07-07T06:58:03.710Z",
+    "status": "resolved",
+    "image": null
+  },
+  {
+    "id": "SB-8371B",
+    "title": "Pothole on Outer Ring Road",
+    "description": "A large, deep pothole has formed in the middle lane, causing major traffic jams and posing a hazard to two-wheelers.",
+    "category": "road",
+    "location": "Near Marathahalli Bridge, Bengaluru",
+    "date": "2026-07-05T10:15:00.000Z",
+    "status": "resolved",
+    "image": null
+  },
+  {
+    "id": "SB-29A4D1",
+    "title": "Garbage Heap in Sector 3",
+    "description": "Waste has not been cleared for the past 5 days. Foul smell is spreading and attracting stray animals.",
+    "category": "garbage",
+    "location": "Corner of Street 4, Sector 3, HSR Layout, Bengaluru",
+    "date": "2026-07-06T09:00:00.000Z",
+    "status": "resolved",
+    "image": null
+  }
+]
