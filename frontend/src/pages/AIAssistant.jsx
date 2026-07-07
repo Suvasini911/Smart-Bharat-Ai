@@ -247,6 +247,7 @@ Your Aadhaar card will be delivered to your address in 60-90 days, or you can do
             {suggestedQueries.map((query) => (
               <button
                 key={query}
+                aria-label={query}
                 onClick={() => handleSend(query)}
                 className="text-xs font-semibold text-navy-600 bg-navy-50 hover:bg-navy-100 border border-navy-100 hover:border-navy-200 px-3 py-1.5 rounded-full transition-all shrink-0 cursor-pointer"
               >
@@ -265,6 +266,7 @@ Your Aadhaar card will be delivered to your address in 60-90 days, or you can do
           className="border-t border-slate-200 p-4 flex items-center space-x-3 bg-white shrink-0"
         >
           <input
+          aria-label="Ask AI Assistant"
             type="text"
             value={inputVal}
             onChange={(e) => setInputVal(e.target.value)}
@@ -273,6 +275,7 @@ Your Aadhaar card will be delivered to your address in 60-90 days, or you can do
             className="flex-1 min-w-0 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-hidden focus:border-navy-500 focus:bg-white text-slate-800 placeholder-slate-400 font-medium"
           />
           <button
+          aria-label="Send Message"
             type="submit"
             disabled={!inputVal.trim() || isTyping}
             className="bg-navy-600 hover:bg-navy-700 disabled:bg-slate-100 disabled:text-slate-400 disabled:cursor-not-allowed text-white p-3 rounded-xl transition-all shadow-xs cursor-pointer"

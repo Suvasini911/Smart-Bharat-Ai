@@ -88,6 +88,10 @@ export const PlatformProvider = ({ children }) => {
   };
 
   const registerComplaint = async (complaintData) => {
+
+    if (!complaintData.title?.trim()) return;
+    if (!complaintData.description?.trim()) return;
+
     try {
       const response = await axios.post(`${API_BASE_URL}/complaints`, complaintData);
       const newComplaint = response.data;
