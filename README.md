@@ -56,7 +56,7 @@ smart-bharat/
 4. Open the newly created `.env` file and replace `your_gemini_api_key_here` with your official Google Gemini API Key:
    ```env
    PORT=5000
-   GEMINI_API_KEY=AIzaSy...
+   GEMINI_API_KEY=YOUR_GEMINI_API_KEY
    ```
 5. Start the backend server (runs on port 5000 by default):
    * For production/standard start:
